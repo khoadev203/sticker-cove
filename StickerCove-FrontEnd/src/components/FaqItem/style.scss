@@ -1,0 +1,47 @@
+@import "../../styles/variable.scss";
+
+.faq-item {
+  width: 100%;
+  border-radius: 16px;
+  background-color: $white-darker;
+  padding: 16px;
+  gap: 8px;
+  transition: 0.3s;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+  cursor: pointer;
+
+  &-question {
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-between;
+
+    & > div {
+      & > span {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-answer {
+    font-size: 16px;
+    padding-top: 8px;
+    border-top: 1px solid $black-light;
+    animation: fadeIn 0.5s ease-in-out;
+
+    & > span {
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

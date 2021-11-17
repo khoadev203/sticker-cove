@@ -1,0 +1,119 @@
+@import "../../styles/variable.scss";
+
+.help {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: pytagoras;
+  font-size: 35px;
+  padding: 64px 15%;
+  transition: 0.3s;
+
+  &-alert {
+    width: 100%;
+
+    & > div {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      padding: 8px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    &-succeed {
+      color: $blue-bright;
+      background-color: rgba($color: $blue-bright, $alpha: 0.3);
+      animation: expanding ease-out 1s;
+    }
+    &-failed {
+      color: $red;
+      background-color: rgba($color: $red, $alpha: 0.3);
+      animation: expanding ease-out 0.5s;
+    }
+  }
+
+  &-wrap {
+    margin-top: 40px;
+    width: 100%;
+    padding: 32px;
+    border-radius: 16px;
+    background-color: $white-darker;
+    gap: 24px;
+
+    & > div {
+      width: 100%;
+      gap: 24px;
+    }
+  }
+
+  &-comments {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 128px;
+  }
+
+  & button {
+    outline: 0;
+    padding: 16px 0;
+    border-radius: 16px;
+    border: 1px solid $white-darker;
+    background-color: $blue;
+    font-size: 18px;
+    color: $white;
+    letter-spacing: 2px;
+
+    &:hover {
+      background-color: $blue-darker;
+    }
+
+    &:active {
+      background-color: $blue;
+    }
+  }
+}
+
+.help-inputs {
+  width: 100%;
+  padding: 16px;
+  outline: 0;
+  border: 1px solid $white-blue;
+  border-radius: 16px;
+
+  &:focus {
+    border-color: $blue;
+  }
+}
+
+@media (max-width: 768px) {
+  .help {
+    padding: 32px;
+
+    &-wrap {
+      margin-top: 16px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .help {
+    padding: 32px 8px;
+
+    &-wrap {
+      & > div {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@keyframes expanding {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

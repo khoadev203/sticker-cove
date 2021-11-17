@@ -1,0 +1,133 @@
+@import "../../../styles/variable.scss";
+
+.main-banner {
+  width: 100%;
+  min-height: 500px;
+  background-image: url("../../../resources/images/main-banner.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 15%;
+
+  &-texts {
+    width: 100%;
+    //align-items: center;
+    justify-content: center;
+  }
+
+  &-title {
+    position: relative;
+    z-index: 1;
+    min-width: 400px;
+    width: 80%;
+    justify-content: center;
+    margin-bottom: 16px;
+
+    & > div {
+      font-size: 45px;
+      font-family: pytagoras;
+      color: $white;
+      z-index: 3;
+      margin-left: -32px;
+      letter-spacing: 2px;
+    }
+
+    & > img {
+      width: 100%;
+      max-width: 480px;
+      height: 80%;
+      position: absolute;
+      bottom: 0;
+      z-index: 2;
+    }
+  }
+
+  &-order {
+    width: 100%;
+    //justify-content: center;
+    margin-top: 36px;
+    margin-left: 25px;
+  }
+
+  &-comments {
+    color: $white;
+    width: 64%;
+    min-width: 300px;
+    max-width: 400px;
+    margin-left: 25px;
+  }
+
+  & > img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-banner {
+    padding: 64px 3%;
+
+    & > img {
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .main-banner {
+    padding: 64px 3%;
+    min-height: auto;
+
+    &-title {
+      & > div {
+        letter-spacing: 1px;
+      }
+    }
+
+    & > img {
+      width: 50%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-banner {
+    padding: 64px 8px;
+    height: 600px;
+    justify-content: flex-start;
+    flex-direction: column !important;
+    gap: 64px;
+
+    &-texts {
+      align-items: center;
+    }
+
+    &-title {
+      & > div {
+        font-size: 35px;
+        z-index: 3;
+        margin-left: -32px;
+        letter-spacing: 1px;
+      }
+      & > img {
+        width: 80%;
+      }
+    }
+
+    &-order {
+      justify-content: center;
+      &-button {
+        width: 80%;
+        max-width: 300px;
+      }
+    }
+
+    & > img {
+      width: auto;
+      height: 300px;
+    }
+  }
+}

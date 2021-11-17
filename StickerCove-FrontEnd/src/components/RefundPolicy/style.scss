@@ -1,0 +1,39 @@
+@import "../../styles/variable.scss";
+
+.refund-policy {
+  width: 100%;
+  padding: 64px 15%;
+  gap: 16px;
+  font-size: 35px;
+  font-family: pytagoras;
+  align-items: center;
+
+  & > span {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  &-section {
+    width: 100%;
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: 600;
+
+    & > p {
+      font-weight: normal;
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .refund-policy {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 425px) {
+  .refund-policy {
+    padding: 32px 8px;
+  }
+}
